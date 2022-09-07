@@ -561,7 +561,6 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
-  row-gap: 55px;
 }
 .testimonials .box {
   padding: 20px;
@@ -573,7 +572,7 @@ ul {
 .testimonials .box img {
   position: absolute;
   right: -10px;
-  top: -50px;
+  top: -20px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
