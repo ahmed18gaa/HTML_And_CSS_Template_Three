@@ -778,6 +778,7 @@ ul {
   color: var(--main-color);
 }
 /* End Services */
+/* Start Skills */
 .our-skills {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
@@ -820,6 +821,7 @@ ul {
   height: 100%;
   background-color: var(--main-color);
 }
+/* End Skills */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
