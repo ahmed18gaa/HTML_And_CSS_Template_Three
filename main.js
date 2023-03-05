@@ -2,16 +2,30 @@
 let skillsSection = document.querySelector(".our-skills");
 let spans = document.querySelectorAll(".the-progress span");
 
-window.onscroll = function () {
+window.addEventListener("scroll", function () {
   if (window.scrollY >= skillsSection.offsetTop - 300) {
     spans.forEach((span) => {
       span.style.width = span.dataset.width;
     });
   }
-};
+});
 
 // Events Section
-let countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
+
+// create a new Date object
+let lastDayInYear = new Date();
+
+// set the date to the last day of the current year
+lastDayInYear.setMonth(11); // December
+lastDayInYear.setDate(31);
+
+// set the time to the last second of the day
+lastDayInYear.setHours(23);
+lastDayInYear.setMinutes(59);
+lastDayInYear.setSeconds(59);
+
+// get the timestamp in milliseconds
+let countDownDate = lastDayInYear.getTime();
 
 let counter = setInterval(() => {
   let dateNow = new Date().getTime();
@@ -39,12 +53,12 @@ let nums = document.querySelectorAll(".stats .number");
 let startSection = document.querySelector(".stats");
 let started = false; // Function Started ? No
 
-window.onscroll = function () {
+window.addEventListener("scroll", function () {
   if (window.scrollY >= startSection.offsetTop - 300) {
     if (!started) nums.forEach((num) => startCount(num));
     started = true;
   }
-};
+});
 
 function startCount(el) {
   let goal = el.dataset.goal;
